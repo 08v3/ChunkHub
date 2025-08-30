@@ -10,6 +10,6 @@ loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/8a0754111c474823
 elseif game.CreatorId == 32333865 then -- Bl
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/3a90150860154be9a35ee96a4d1adc84"))()
 elseif game.CreatorId == 4372130 then -- Blox Fruits
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/275ae051c38e4e459130796d710bb09c"))()
+loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/2cfd6b71b585443e8fb9307010812ce2"))()
 end
 print("Chunk hub loader")
