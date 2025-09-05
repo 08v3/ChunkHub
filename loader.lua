@@ -29,6 +29,8 @@ elseif game.CreatorId == 35789249 then -- GaG
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/gag.txt"))()
 elseif game.CreatorId == 4705120 then -- Legends Of Speed
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/legendofspeed.txt"))()
+elseif game.CreatorId == 12836673 then -- Blade Ball
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/bladeball.txt"))()
 else
 game.Players.LocalPlayer:Kick("Unsupported game")
 end
