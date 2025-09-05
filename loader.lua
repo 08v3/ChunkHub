@@ -27,6 +27,8 @@ elseif game.CreatorId == 35815907 then -- Sab
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/f661d800b2294a99823a5400128bb649"))()
 elseif game.CreatorId == 35789249 then -- GaG
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/gag.txt"))()
+elseif game.CreatorId == 4705120 then -- Legends Of Speed
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/legendofspeed.txt"))()
 else
 game.Players.LocalPlayer:Kick("Unsupported game")
 end
