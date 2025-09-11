@@ -15,6 +15,8 @@ elseif game.CreatorId == 2613928 then -- Arsenal
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/1070547baa734c15b34d2cc0ea4b4db2"))()
 elseif game.CreatorId == 947178762 then -- Case Rolling Rng
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/7832a535d4774da49692303718cfd9b8"))()
+elseif game.PlaceId == 3101667897 then -- Legends Of Speed
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/legendofspeed.txt"))()
 elseif game.CreatorId == 4705120 then -- Ninja Legends
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/39ffb25da0ee485e8740113ac7149a48"))()
 elseif game.CreatorId == 35871968 then -- Untitled Fishing Game
@@ -27,10 +29,10 @@ elseif game.CreatorId == 35815907 then -- Sab
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/f661d800b2294a99823a5400128bb649"))()
 elseif game.CreatorId == 35789249 then -- GaG
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/gag.txt"))()
-elseif game.PlaceId == 3101667897 then -- Legends Of Speed
-loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/legendofspeed.txt"))()
 elseif game.CreatorId == 12836673 then -- Blade Ball
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/bladeball.txt"))()
+elseif game.CreatorId == 295182 then -- Adopt Me
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/adoptme.txt",true))()
 else
 game.Players.LocalPlayer:Kick("Unsupported game")
 end
