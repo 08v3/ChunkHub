@@ -89,9 +89,6 @@ Title.Text = "Chunk Hub Key System"
 Title.TextColor3 = Color3.fromRGB(156, 119, 84)
 Title.Parent = MainFrame
 task.spawn(function()
-if script_key and type(script_key) == 'string' and script_key:find("08v3_") then
-sgui:Destroy()
-end
 function loader()
 if game.CreatorId == 35102746 then -- Fish It
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/8a0754111c4748238bcfc4ffcd271421"))()
@@ -124,6 +121,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/he
 else
 game.Players.LocalPlayer:Kick("Unsupported game")
 end
+end
+if script_key and type(script_key) == 'string' and script_key:find("08v3_") then
+sgui:Destroy()
+loader()
 end
 Submit.MouseButton1Click:Connect(function()
 script_key = Key.Text
