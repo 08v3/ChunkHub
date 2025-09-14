@@ -93,7 +93,7 @@ function loader()
 if game.CreatorId == 35102746 then -- Fish It
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/8a0754111c4748238bcfc4ffcd271421"))()
 elseif game.CreatorId == 32333865 then -- Bl
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/3a90150860154be9a35ee96a4d1adc84"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/bl.txt"))()
 elseif game.CreatorId == 4372130 then -- Blox Fruits
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/2cfd6b71b585443e8fb9307010812ce2"))()
 elseif game.CreatorId == 2613928 then -- Arsenal
