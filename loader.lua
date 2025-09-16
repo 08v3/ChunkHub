@@ -109,7 +109,7 @@ loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/5633300e7c084381
 elseif game.CreatorId == 36097435 then -- Tennis Clash
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/tennisclash.txt"))()
 elseif game.CreatorId == 6042520 then -- 99 Night
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/d245d3d4b01849bd90680e8e273947f7"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/99n.txt"))()
 elseif game.CreatorId == 35815907 then -- Sab
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/f661d800b2294a99823a5400128bb649"))()
 elseif game.CreatorId == 35789249 then -- GaG
