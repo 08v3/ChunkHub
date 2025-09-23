@@ -5,10 +5,58 @@
 | |___|  _  | |_| | |\  | . \  |  _  | |_| | |_) |
  \____|_| |_|\___/|_| \_|_|\_\ |_| |_|\___/|____/ 
 ]]
+local tweenser = game:GetService("TweenService")
 local p = game:GetService("Players")
 local uis = game:GetService("UserInputService")
 local lp = p.LocalPlayer
 local plrgui = lp:WaitForChild("PlayerGui")
+local introsgui = Instance.new("ScreenGui")
+introsgui.Parent = plrgui
+introsgui.ResetOnSpawn = false
+local blur = Instance.new("BlurEffect")
+blur.Size = 50
+blur.Parent = game:GetService("Lighting")
+local intro = Instance.new("ImageButton")
+intro.Position = UDim2.new(0.5, -500, 0.5, -50)
+intro.Size = UDim2.new(0, 100, 0, 100)
+intro.Image = "rbxassetid://72049465060021"
+intro.ImageTransparency = 0
+intro.BackgroundTransparency = 1
+intro.Visible = true
+intro.Parent = introsgui
+local introcorner = Instance.new("UICorner")
+introcorner.CornerRadius = UDim.new(1, 0)
+introcorner.Parent = intro
+local goal = {}
+goal.Position = UDim2.new(0.5, -50, 0.5, -50)
+local tweeninfo = TweenInfo.new(
+ 2,
+ Enum.EasingStyle.Linear,
+ Enum.EasingDirection.Out,
+ 0,
+ false,
+ 0
+)
+local tween = tweenser:Create(intro, tweeninfo, goal)
+tween:Play()
+tween.Completed:Connect(function()
+ task.wait(1)
+ blur:Destroy()
+ for i = 0, 1, 0.05 do
+  intro.ImageTransparency = i
+ end
+ game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "[ℹ️] Executor:",
+  Text = identifyexecutor() or getexecutorname() or "Unknown"
+ })
+ game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "[ℹ️] Greetings",
+  Text = "Welcome to Chunk Hub, "..lp.Name.."."
+ })
+ intro:Destroy()
+end)
+tween.Completed:Wait()
+task.wait(2)
 
 local sgui = Instance.new("ScreenGui")
 sgui.Name = "ScreenGui"
@@ -123,16 +171,29 @@ game.Players.LocalPlayer:Kick("Unsupported game")
 end
 end
 if script_key and type(script_key) == 'string' and script_key:find("08v3_") then
+game:GetService("StarterGui"):SetCore("SendNotification", {
+ Title = "[ℹ️] Uiless:",
+ Text = "Loading script with key: "..tostring(script_key)
+})
 sgui:Destroy()
+task.wait(2)
 loader()
 end
 Submit.MouseButton1Click:Connect(function()
+game:GetService("StarterGui"):SetCore("SendNotification", {
+ Title = "[ℹ️] Sumbit Key:",
+ Text = "Validating key: "..tostring(Key.Text)
+})
 script_key = Key.Text
+task.wait(2)
 loader()
 sgui:Destroy()
 end)
 Get.MouseButton1Click:Connect(function()
 setclipboard("https://authguard.org/a/541")
-print("Copied Get Key Link")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+ Title = "[ℹ️] Get Key:",
+ Text = "Copied get key url to clipboard"
+})
 end)
 end)
