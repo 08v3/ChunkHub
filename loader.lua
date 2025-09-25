@@ -159,7 +159,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/he
 elseif game.CreatorId == 6042520 then -- 99 Night
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/99n.txt"))()
 elseif game.CreatorId == 35815907 then -- Sab
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/f661d800b2294a99823a5400128bb649"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/sab.txt"))()
 elseif game.CreatorId == 35789249 then -- GaG
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/gag.txt"))()
 elseif game.CreatorId == 12836673 then -- Blade Ball
