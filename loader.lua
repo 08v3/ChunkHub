@@ -151,7 +151,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/he
 elseif game.PlaceId == 3101667897 then -- Legends Of Speed
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/legendofspeed.txt"))()
 elseif game.CreatorId == 4705120 then -- Ninja Legends
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/39ffb25da0ee485e8740113ac7149a48"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/ninjalegends.txt"))()
 elseif game.CreatorId == 35871968 then -- Untitled Fishing Game
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/untitledfishinggame.txt"))()
 elseif game.CreatorId == 36097435 then -- Tennis Clash
