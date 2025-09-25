@@ -19,7 +19,7 @@ blur.Parent = game:GetService("Lighting")
 local intro = Instance.new("ImageButton")
 intro.Position = UDim2.new(0.5, -500, 0.5, -50)
 intro.Size = UDim2.new(0, 100, 0, 100)
-intro.Image = "rbxassetid://72049465060021"
+intro.Image = "rbxassetid://104167571567924"
 intro.ImageTransparency = 0
 intro.BackgroundTransparency = 1
 intro.Visible = true
@@ -30,7 +30,7 @@ introcorner.Parent = intro
 local goal = {}
 goal.Position = UDim2.new(0.5, -50, 0.5, -50)
 local tweeninfo = TweenInfo.new(
- 2,
+ 1,
  Enum.EasingStyle.Linear,
  Enum.EasingDirection.Out,
  0,
