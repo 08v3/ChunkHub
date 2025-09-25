@@ -147,7 +147,7 @@ loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/2cfd6b71b585443e
 elseif game.CreatorId == 2613928 then -- Arsenal
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/arsenal.txt"))()
 elseif game.CreatorId == 947178762 then -- Case Rolling Rng
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/7832a535d4774da49692303718cfd9b8"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/caserollingrng.txt"))()
 elseif game.PlaceId == 3101667897 then -- Legends Of Speed
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/legendofspeed.txt"))()
 elseif game.CreatorId == 4705120 then -- Ninja Legends
