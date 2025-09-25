@@ -145,7 +145,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/he
 elseif game.CreatorId == 4372130 then -- Blox Fruits
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/2cfd6b71b585443e8fb9307010812ce2"))()
 elseif game.CreatorId == 2613928 then -- Arsenal
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/1070547baa734c15b34d2cc0ea4b4db2"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/arsenal.txt"))()
 elseif game.CreatorId == 947178762 then -- Case Rolling Rng
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/7832a535d4774da49692303718cfd9b8"))()
 elseif game.PlaceId == 3101667897 then -- Legends Of Speed
