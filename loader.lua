@@ -143,7 +143,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/he
 elseif game.CreatorId == 32333865 then -- Bl
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/bl.txt"))()
 elseif game.CreatorId == 4372130 then -- Blox Fruits
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/2cfd6b71b585443e8fb9307010812ce2"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/bloxfruits.txt"))()
 elseif game.CreatorId == 2613928 then -- Arsenal
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/arsenal.txt"))()
 elseif game.CreatorId == 947178762 then -- Case Rolling Rng
