@@ -153,7 +153,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/he
 elseif game.CreatorId == 4705120 then -- Ninja Legends
 loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/39ffb25da0ee485e8740113ac7149a48"))()
 elseif game.CreatorId == 35871968 then -- Untitled Fishing Game
-loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/5633300e7c0843818556bbb968530f05"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/untitledfishinggame.txt"))()
 elseif game.CreatorId == 36097435 then -- Tennis Clash
 loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/tennisclash.txt"))()
 elseif game.CreatorId == 6042520 then -- 99 Night
