@@ -191,10 +191,11 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
  Text = "Validating key: "..tostring(Key.Text)
 })
 script_key = Key.Text
-writefile("ChunkHubKey.txt", Key.Text)
 task.wait(2)
 loader()
 sgui:Destroy()
+task.wait(10)
+writefile("ChunkHubKey.txt", Key.Text)
 end)
 Get.MouseButton1Click:Connect(function()
 setclipboard("https://authguard.org/a/541")
