@@ -5,6 +5,9 @@
 | |___|  _  | |_| | |\  | . \  |  _  | |_| | |_) |
  \____|_| |_|\___/|_| \_|_|\_\ |_| |_|\___/|____/ 
 ]]
+if isfile("ChunkHubKey.txt") then
+script_key = readfile("ChunkHubKey.txt")
+end
 local tweenser = game:GetService("TweenService")
 local p = game:GetService("Players")
 local uis = game:GetService("UserInputService")
@@ -93,6 +96,9 @@ Key.TextXAlignment = Enum.TextXAlignment.Left
 Key.TextDirection = Enum.TextDirection.LeftToRight
 Key.ClearTextOnFocus = false
 Key.Parent = MainFrame
+if isfile("ChunkHubKey.txt") then
+Key.Text = readfile("ChunkHubKey.txt")
+end
 
 local KeyCorner = Instance.new("UICorner")
 KeyCorner.CornerRadius = UDim.new(0, 20)
@@ -185,6 +191,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
  Text = "Validating key: "..tostring(Key.Text)
 })
 script_key = Key.Text
+writefile("ChunkHubKey.txt", Key.Text)
 task.wait(2)
 loader()
 sgui:Destroy()
