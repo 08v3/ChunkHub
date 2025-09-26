@@ -8,64 +8,58 @@
 if isfile("ChunkHubKey.txt") then
 script_key = readfile("ChunkHubKey.txt")
 end
-local tweenser = game:GetService("TweenService")
-local p = game:GetService("Players")
 local uis = game:GetService("UserInputService")
+local p = game:GetService("Players")
+local Lighting = game:GetService("Lighting")
+local tweenser = game:GetService("TweenService")
 local lp = p.LocalPlayer
-local plrgui = lp:WaitForChild("PlayerGui")
-local introsgui = Instance.new("ScreenGui")
-introsgui.Parent = plrgui
-introsgui.ResetOnSpawn = false
-local blur = Instance.new("BlurEffect")
-blur.Size = 50
-blur.Parent = game:GetService("Lighting")
-local intro = Instance.new("ImageButton")
-intro.Position = UDim2.new(0.5, -500, 0.5, -50)
-intro.Size = UDim2.new(0, 100, 0, 100)
-intro.Image = "rbxassetid://78456259774395"
-intro.ImageTransparency = 0
-intro.BackgroundTransparency = 1
-intro.Visible = true
-intro.Parent = introsgui
-local introcorner = Instance.new("UICorner")
-introcorner.CornerRadius = UDim.new(1, 0)
-introcorner.Parent = intro
-local goal = {}
-goal.Position = UDim2.new(0.5, -50, 0.5, -50)
-local tweeninfo = TweenInfo.new(
- 1,
- Enum.EasingStyle.Linear,
- Enum.EasingDirection.Out,
- 0,
- false,
- 0
-)
-local tween = tweenser:Create(intro, tweeninfo, goal)
-tween:Play()
-tween.Completed:Connect(function()
- task.wait(1)
- blur:Destroy()
- for i = 0, 1, 0.05 do
-  intro.ImageTransparency = i
- end
- game:GetService("StarterGui"):SetCore("SendNotification", {
-  Title = "[ℹ️] Executor:",
-  Text = identifyexecutor() or getexecutorname() or "Unknown"
- })
- game:GetService("StarterGui"):SetCore("SendNotification", {
-  Title = "[ℹ️] Greetings",
-  Text = "Welcome to Chunk Hub, "..lp.Name.."."
- })
- intro:Destroy()
-end)
-tween.Completed:Wait()
+local gui = Instance.new("ScreenGui", lp:WaitForChild("PlayerGui"))
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+local finished = Instance.new("BindableEvent")
+local blur = Instance.new("BlurEffect", Lighting)
+blur.Size = 0
+tweenser:Create(blur, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+    Size = 50
+}):Play()
+local logo = Instance.new("ImageLabel", gui)
+logo.Image = "rbxassetid://78456259774395"
+logo.Size = UDim2.fromOffset(0,0)
+logo.Position = UDim2.fromScale(0.5,0.5)
+logo.AnchorPoint = Vector2.new(0.5,0.5)
+logo.BackgroundTransparency = 1
+local appear = tweenser:Create(logo, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+    Size = UDim2.fromOffset(200,200),
+    Rotation = 360
+})
+appear:Play()
+appear.Completed:Wait()
+tweenser:Create(logo, TweenInfo.new(1.5, Enum.EasingStyle.Quad), {
+    ImageTransparency = 1,
+    Size = UDim2.fromOffset(250,250)
+}):Play()
 task.wait(2)
+logo:Destroy()
+tweenser:Create(blur, TweenInfo.new(1), {Size = 0}):Play()
+task.wait(1)
+blur:Destroy()
+finished:Fire()
+finished:Destroy()
+finished.Event:Wait()
+game:GetService("StarterGui"):SetCore("SendNotification", {
+ Title = "[ℹ️] Executor:",
+ Text = identifyexecutor() or getexecutorname() or "Unknown"
+})
+game:GetService("StarterGui"):SetCore("SendNotification", {
+ Title = "[ℹ️] Greetings",
+ Text = "Welcome to Chunk Hub, "..lp.Name.."."
+})
 
 local sgui = Instance.new("ScreenGui")
 sgui.Name = "ScreenGui"
 sgui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 sgui.ResetOnSpawn = false
-sgui.Parent = plrgui
+sgui.Parent = lp.PlayerGui
 
 local MainFrame = Instance.new("Frame")
 MainFrame.Name = "KeySystem"
