@@ -82,7 +82,9 @@ function loader()
  elseif game.CreatorId == 12836673 then -- Blade Ball
   loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/bladeball.txt"))()
  elseif game.CreatorId == 295182 then -- Adopt Me
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/adoptme.txt",true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/adoptme.txt"))()
+ elseif game.CreatorId == 33548380 then -- Forsaken
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/08v3/ChunkHub/refs/heads/main/forsaken.txt"))()
  else
   game.Players.LocalPlayer:Kick("Unsupported game")
  end
